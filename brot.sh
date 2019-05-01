@@ -8,6 +8,7 @@ sleep 10
 BASEDIR=$(dirname $0)
 echo ${BASEDIR}
 source ${BASEDIR}/ShellBot.sh
+source ${BASEDIR}/commands.sh
 
 logs=${BASEDIR}/logs
 
@@ -25,6 +26,9 @@ do
 	do
 	(
 		if [[ ${message_entities_type[$id]} == bot_command ]]; then
+			if [[ "$(echo ${message_text[$id]%%@*} | grep "^\/stream" )" ]]; then
+				stream "${message_text[$id]}"
+			fi
 			if [[ "$(echo ${message_text[$id]%%@*} | grep "^\/linux" )" ]]; then
 				command="${message_text[$id]}"
 				array=(${command})
