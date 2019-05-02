@@ -1,7 +1,0 @@
-t=2019-04-30T21:37:50+0000 lvl=info msg="no configuration paths supplied"
-t=2019-04-30T21:37:50+0000 lvl=info msg="using configuration at default config path" path=/home/odroid/.ngrok2/ngrok.yml
-t=2019-04-30T21:37:50+0000 lvl=info msg="open config file" path=/home/odroid/.ngrok2/ngrok.yml err=nil
-t=2019-04-30T21:37:50+0000 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040
-t=2019-04-30T21:37:51+0000 lvl=info msg="tunnel session started" obj=tunnels.session
-t=2019-04-30T21:37:51+0000 lvl=info msg="client session established" obj=csess id=6476bbfe72b3
-t=2019-04-30T21:37:51+0000 lvl=info msg="started tunnel" obj=tunnels name=command_line addr=//localhost:22 url=tcp://0.tcp.ngrok.io:12068
