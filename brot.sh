@@ -43,22 +43,23 @@ do
 					
 			fi
 			if [[ "$(echo ${message_text[$id]%%@*} | grep "^\/expose" )" ]]; then
+				logs="${BASEDIR}/logs/ngrok-${message_date}.log"
 				timestamp=$(date "+%Y%m%d%H%M%S")
 				command="${message_text[$id]}"
 				array=(${command})
 				array[0]="/expose"
 				command=${array[@]:1}
 				if [[ "${command}" -eq "22" ]]; then
-					final_command=$(ngrok tcp -log stdout ${command} > logs/ngrok-${message_date}.log &)
+					final_command=$(ngrok tcp -log stdout ${command} > ${logs} &)
 				else
-					final_command=$(ngrok http -log stdout ${command} > logs/ngrok-${message_date}.log &)
+					final_command=$(ngrok http -log stdout ${command} > ${logs} &)
 				fi
 				echo "${command}"
 				if [[ ! -z ${command} ]]; then
 					${final_command}
 					sleep 3
 					ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "Use the command as follow\n \
-						ssh $(tail -1 logs/ngrok-${message_date}.log | cut -d'/' -f5 | sed 's/:/ -p/')"
+						ssh odroid@$(tail -1 logs/ngrok-${message_date}.log | cut -d'/' -f5 | sed 's/:/ -p/')"
 				else
 					ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "Usage: ${array[0]} <port>"
 				fi
