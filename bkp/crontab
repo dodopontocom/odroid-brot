@@ -1,0 +1,1 @@
+*/2 * * * * ps -ef | grep -v grep | grep ngrok http -region=eu -log stdout 9000 || /home/odroid/odroid-brot/ngrok-daemon.sh
