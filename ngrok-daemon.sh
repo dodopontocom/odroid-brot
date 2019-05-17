@@ -6,7 +6,8 @@ timestamp=$(date "+%Y%m%d-%H%M%S")
 log=${BASEDIR}/logs/ngrok-daemon-${timestamp}.log
 cmd=$(ngrok http -region=eu -log stdout 9000 > ${log} &)
 sleep 3
-url=$(tail -1 ${log} | cut -d'=' -f8)
+url=$(cat ${log} | grep -E "*\.eu\.*" | head -1 | cut -d'=' -f8)
+echo ${url} >> /tmp/NGROK_PORTAINER_URL
 sendTelegram() {
 
 	new_url=$1

@@ -6,7 +6,8 @@ timestamp=$(date "+%Y%m%d-%H%M%S")
 log=${BASEDIR}/logs/bash-rest-daemon-${timestamp}.log
 cmd=$(ngrok http -region=au -log stdout 8083 > ${log} &)
 sleep 6
-url=$(tail -1 ${log} | cut -d'=' -f8)
+url=$(cat ${log} | grep -E "*\.au\.*" | head -1 | cut -d'=' -f8)
+echo ${url} >> /tmp/NGROK_BASH_REST_URL
 sendTelegram() {
 
 	new_url=$1
