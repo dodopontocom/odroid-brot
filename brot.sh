@@ -58,8 +58,9 @@ do
 				if [[ ! -z ${command} ]]; then
 					${final_command}
 					sleep 3
+					ssh_url=$(cat logs/ngrok-${message_date}.log | grep //0.tcp.ngrok.io: | cut -d'=' -f8)
 					ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "Use the command as follow\n \
-						ssh odroid@$(tail -1 logs/ngrok-${message_date}.log | cut -d'/' -f5 | sed 's/:/ -p/')"
+						ssh odroid@$(echo ${ssh_url} | sed  's#tcp://##g' | sed 's/:/ -p/ ')"
 				else
 					ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "Usage: ${array[0]} <port>"
 				fi
