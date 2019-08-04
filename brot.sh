@@ -2,7 +2,7 @@
 #
 
 #sleep para funcionar melhor no startup do sistema
-sleep 10
+sleep 13
 
 # Importando API
 BASEDIR=$(dirname $0)
