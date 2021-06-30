@@ -1,0 +1,158 @@
+    1  sudo su
+    2  sudo -
+    3  sudo su -
+    4  exit
+    5  sudo su
+    6  exit
+    7  cd
+    8  vim .bashrc 
+    9  sudo apt-get update 
+   10  sudo apt-get install -y git vim
+   11  sudo apt-get install -y docker-ce
+   12  lsb_release
+   13  lsb_release -cs
+   14  arch
+   15  sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
+   16  echo $
+   17  echo $?
+   18  cd
+   19  vim .bashrc 
+   20  source .bashrc 
+   21  ls -lrt
+   22  clear
+   23  curl -fsSL https://download.docker.com/linux/debian $(lsb_release -cs) stable | sudo tee /etc/apt/sources.list.d/docker.list
+   24  curl -fsSL https://download.docker.com/linux/debian $(lsb_release -cs) stable | sudo tee /etc/apt/sources.list.d/docker.list
+   25  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+   26  echo "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable | sudo tee /etc/apt/sources.list.d/docker.list
+   27  echo "deb [arch=arm64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+   28  cat /etc/apt/sources.list.d/docker.list 
+   29  sudo apt-get update 
+   30  sudo apt-get upgrade
+   31  echo $?
+   32  sudo apt-get install -y docker-ce
+   33  sudo apt-get install -y jq
+   34  echo "deb [arch=aarch64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+   35  sudo vim /etc/apt/sources.list.d/docker.list 
+   36  sudo apt-get update 
+   37  sudo vim /etc/apt/sources.list.d/docker.list 
+   38  sudo apt-get update 
+   39  echo $?
+   40  sudo apt-get upgrade
+   41  sudo apt-get install -y docker-ce
+   42  echo $?
+   43  sudo docker
+   44  sudo usermod -aG docker odroid
+   45  docker ps -a
+   46  sudo reboot
+   47  docker ps -a
+   48  sudo apt-get install -y docker-ce-cli containerd.io
+   49  pwd
+   50  sudo su
+   51  ./telegram-bot-mercado/mercado.sh 
+   52  ./odroid-contas/contas.sh 
+   53  ls -lrt
+   54  sudo chown odroid:odroid .
+   55  ls -lrt
+   56  rm -vfr -
+   57  sudo chown odroid:odroid *
+   58  ls -lrt
+   59  ./odroid-contas/contas.sh 
+   60  ls -lrt
+   61  cd botMercado/
+   62  ls -lrta
+   63  cd ../
+   64  cd telegram-bot-mercado/
+   65  ls -la
+   66  git status
+   67  git pull
+   68  ls -lrt
+   69  rm -vfr -
+   70  cd ..
+   71  ls -la
+   72  cat .sudo_as_admin_successful 
+   73  cat .profile 
+   74  clear
+   75  pwd
+   76  cd odroid-contas/
+   77  ls -la
+   78  cat Dockerfile.gcloud-sdk 
+   79  cat Dockerfile
+   80  clear
+   81  cat Dockerfile
+   82  vim Dockerfile
+   83  ls -lrt
+   84  cd ..
+   85  sudo chown odroid:odroid **/*
+   86  ls -lrt odroid-contas/
+   87  ls -lrt odroid-contas/functions/
+   88  sudo chown odroid:odroid **/**
+   89  ls -lrt odroid-contas/functions/
+   90  sudo chown odroid:odroid **/***
+   91  ls -lrt odroid-contas/functions/
+   92  sudo chown -R odroid:odroid .
+   93  ls -lrt odroid-contas/functions/
+   94  ls -lrt odroid-contas/logs/
+   95  cd odroid-contas/
+   96  top
+   97  ./contas.sh 
+   98  cat .definitions.sh 
+   99  cat .definitions.sh |grep -i token
+  100  cat .definitions.sh |grep -i token\|notifica
+  101  cat .definitions.sh |grep -i "token\|notifica"
+  102  docker ps -a
+  104  jq --version
+  105  docker ps -a
+  106  docker images
+  107  ping 8.8.8.8
+  109  docker
+  110  cd odroid-contas/
+  112  cat Dockerfile
+  113  vim Dockerfile
+  115  docker images
+  116  docker rmi 4dfe3a8a16a9
+  117  docker ps -a
+  118  docker stop $(docker ps -aq)
+  119  docker rm $(docker ps -aq)
+  120  docker rmi 4dfe3a8a16a9
+  121  docker imags
+  122  docker images
+  123  docker run -it --entrypoint bash contas
+  124  docker run --restart always -it --name botcontas contas
+  125  docker ps -a
+  126  docker stop $(docker ps -aq)
+  127  docker rm $(docker ps -aq)
+  128  docker run -it --entrypoint bash contas
+  129  vim Dockerfile
+  131  vim Dockerfile
+  133  vim Dockerfile
+  135  vim Dockerfile
+  137  echo $?
+  138  docker stop $(docker ps -aq)
+  139  docker rm $(docker ps -aq)
+  140  docker images
+  141  docker run -it --entrypoint bash contas
+  142  vim Dockerfile
+  144  docker run --restart always -it --name botcontas contas
+  145  docker stop $(docker ps -aq)
+  146  docker rm $(docker ps -aq)
+  147  docker images
+  148  docker rmi -f $(docker images -f "dangling=true" -q)
+  149  df -h
+  150  ls -lrt
+  151  docker run -it --entrypoint bash contas
+  152  top
+  153  ls -lrt
+  154  cd
+  155  pwd
+  156  ls -lrt /mnt/sdcard/odroid/
+  157  cd
+  158  pwd
+  159  git clone https://github.com/dodopontocom/odroid-brot
+  160  cd odroid-brot/
+  161  git checkout odroid
+  162  ls -lrt
+  163  ls -lart
+  164  rm -vfr *
+  165  ls -la
+  166  mkdir history
+  167  history
